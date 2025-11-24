@@ -1591,14 +1591,17 @@ micro_wake_word:
     gain_factor: 4
   stop_after_detection: false
   models:
+    # GLaDOS Wakeword (neues Modell)
+    - model: https://raw.githubusercontent.com/pham-tuan-binh/glados-respeaker/main/wakeword/glados.json
+      id: glados_wakeword
+    
+    # Bestehende Modelle (optional entfernen, wenn nur GLaDOS genutzt werden soll)
     - model: https://github.com/kahrendt/microWakeWord/releases/download/okay_nabu_20241226.3/okay_nabu.json
       id: okay_nabu
     - model: hey_jarvis
       id: hey_jarvis
     - model: hey_mycroft
       id: hey_mycroft
-    - model: https://github.com/pham-tuan-binh/glados-respeaker/raw/main/wakeword/glados.json
-      id: glados
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
